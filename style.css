@@ -1,0 +1,101 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 20px; /* Fonte maior */
+    line-height: 1.8;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 30px; /* Banner maior */
+    background-color: #1f2d3d;
+    color: #fff;
+}
+.logo {
+    max-height: 120px; /* Logo maior */
+}
+.contact-buttons .btn {
+    margin-left: 15px;
+    padding: 12px 18px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    background-color: #fff;
+}
+.hero-left img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.hero-right {
+    flex: 1;
+    padding: 25px;
+}
+.hero-right h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.cards {
+    text-align: center;
+    padding: 50px;
+    background-color: #f1f1f1;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 220px;
+    font-size: 1.2rem;
+}
+.advogada {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+}
+.advogada-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 350px;
+    border-radius: 10px;
+}
+.social-links a {
+    margin: 0 10px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #1f2d3d;
+    color: #fff;
+    font-size: 1rem;
+}
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
