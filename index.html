@@ -1,27 +1,168 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Débora Kulczar Advocacia</title>
 
   <!-- Fonte -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com=Roboto:wght@400;700&display=swap
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css"/>
+  <!-- CSS embutido -->
+  <style>
+    /* Reset e base */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      font-size: 20px; line-height: 1.8;
+    }
+
+    /* Header */
+    .header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 32px;
+      background-color: #1f2d3d;
+      color: #fff;
+    }
+    .logo { max-height: 80px; }
+    .contact-buttons .btn {
+      margin-left: 12px; padding: 10px 16px;
+      background-color: #007BFF; color: #fff; text-decoration: none;
+      border-radius: 6px; font-size: 1rem;
+    }
+
+    /* Banner */
+    .banner {
+      width: 960px; height: 540px; margin: 24px auto;
+      background: linear-gradient(135deg, #0d1f33 0%, #1f2d3d 60%, #16324a 100%);
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    .banner-split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr; /* esquerda um pouco maior */
+      gap: 24px;
+      padding: 24px 32px;
+      width: 100%;
+    }
+
+    /* Coluna esquerda: conteúdo sobreposto */
+    .banner-content-left {
+      display: flex; flex-direction: column;
+      justify-content: center;
+      max-width: 640px;
+    }
+    .banner h1 {
+      font-size: 3rem; /* ~48px desktop */
+      line-height: 1.2;
+      margin: 0 0 12px;
+      color: #ffffff;
+    }
+    .banner p {
+      font-size: 1.1rem;
+      margin: 0 0 20px;
+      color: #e8eef6;
+    }
+    .banner-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn.cta { padding: 12px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; }
+    .btn.cta.primary { background-color: #28a745; color: #fff; }
+    .btn.cta.primary:hover { background-color: #218838; }
+    .btn.cta.secondary { background-color: #007BFF; color: #fff; }
+    .btn.cta.secondary:hover { background-color: #0069d9; }
+
+    /* Coluna direita: logo */
+    .banner-content-right {
+      display: flex; align-items: center; justify-content: center;
+    }
+    .banner-logo {
+      width: 100%;
+      max-width: 380px; /* tamanho máximo do logo no desktop */
+      height: auto;
+      filter: drop-shadow(0 6px 18px rgba(0,0,0,0.35));
+    }
+
+    /* Seção split (Quem Somos / Sobre) */
+    .about-split {
+      display: flex; gap: 0;
+      max-width: 1920px; margin: 24px auto;
+      background-color: #fff; color: #333;
+    }
+    .about-left { flex: 1; }
+    .about-img {
+      width: 100%; height: 540px;
+      object-fit: cover; display: block;
+    }
+    .about-right {
+      flex: 1; padding: 40px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .about-right h2 {
+      font-size: 35.2px; margin-bottom: 12px; line-height: 1.3;
+    }
+    .about-right p {
+      font-size: 2.2rem; /* ~35.2px */
+      line-height: 1.5;
+    }
+
+    /* Áreas de Atuação */
+    .cards { text-align: center; padding: 50px; background-color: #f1f1f1; }
+    .cards h2 { font-size: 35.2px; line-height: 1.3; }
+    .card-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
+    .card {
+      background-color: #fff; padding: 25px; border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 220px; font-size: 1.2rem;
+    }
+
+    /* Advogada */
+    .advogada { text-align: center; padding: 50px; background-color: #fff; }
+    .advogada-img { display: block; margin: 0 auto; max-width: 350px; border-radius: 10px; }
+    .social-links a { margin: 0 10px; color: #007BFF; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
+
+    /* Rodapé */
+    footer { text-align: center; padding: 25px; background-color: #1f2d3d; color: #fff; font-size: 1rem; }
+
+    /* Responsividade */
+    @media (max-width: 1200px) {
+      .banner { width: 90%; height: auto; }
+    }
+    @media (max-width: 1024px) {
+      .header { flex-direction: column; text-align: center; }
+      .banner { width: 90%; height: auto; }
+      .banner-split { grid-template-columns: 1fr; padding: 20px 24px; }
+      .banner-content-left { max-width: 100%; }
+      .banner-logo { max-width: 300px; }
+      .about-img { height: 360px; }
+      .banner h1 { font-size: 2.5rem; } /* ~40px */
+    }
+    @media (max-width: 768px) {
+      .banner { width: 94%; height: auto; border-radius: 8px; }
+      .banner-content-left { padding: 0; }
+      .banner-logo { max-width: 240px; }
+      .banner h1 { font-size: 2rem; } /* ~32px */
+      .about-split { flex-direction: column; }
+      .about-img { height: auto; }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header class="header">
-    <img src="assets/logo.png" alt="Logo Débora Kulczar Advocacia" class="logo"/>
+    assets/logo.png
     <div class="contact-buttons">
-      <a href="https://wa.me/5511922228326" class="btn whatsapp">WhatsApp: (11) 92222-8326</a>
-      <a href="mailto:debora.kulczar@dkulczar.adv.br" class="btn email">E-mail: debora.kulczar@dkulczar.adv.br</a>
+      https://wa.me/5511922228326WhatsApp: (11) 92222-8326</a>
+      <a href="mailto:deboradkulczar.adv.brE-mail: debora.kulczar@dkulczar.adv.br</a>
     </div>
   </header>
 
-  <section class="banner" aria-label="Excelência em Advocacia e Consultoria Jurídica">
-    <div class="banner-content">
+  <!-- Banner em duas colunas -->
+  <section class="banner banner-split" aria-label="Excelência em Advocacia e Consultoria Jurídica">
+    <div class="banner-content-left">
       <h1>Excelência em Advocacia e Consultoria Jurídica</h1>
       <p>
         Atuação em Direito de Família · Direito do Trabalho · Direito Previdenciário · Direito do Consumidor ·
@@ -29,15 +170,17 @@
         personalizadas para pessoas físicas e empresas.
       </p>
       <div class="banner-ctas">
-        <a href="https://wa.me/5511922228326" class="btn cta primary">Agendar Consulta</a>
-        <a href="#areas" class="btn cta secondary">Nossas Áreas de Atuação</a>
+        <a href="https5511922228326Agendar Consulta</a>
+        #areasNossas Áreas de Atuação</a>
       </div>
     </div>
-  </section>
 
+    <div class="banner-content-right" aria-hidden="false">
+      <!-- Use exatamente o nome do arquivo como você enviou -->
+      <img src="logo .png" alt="Logomarca Dé!-- Quem Somos / Sobre -->
   <section class="about-split">
     <div class="about-left">
-      <img src="assets/escritorio.jpg" alt="Imagem do Escritório" class="about-img"/>
+      assets/escritorio.jpg
     </div>
     <div class="about-right">
       <h2>Quem Somos</h2>
@@ -56,6 +199,7 @@
     </div>
   </section>
 
+  <!-- Áreas de Atuação -->
   <section id="areas" class="cards">
     <h2>Áreas de Atuação</h2>
     <div class="card-container">
@@ -67,21 +211,23 @@
     </div>
   </section>
 
+  <!-- Advogada -->
   <section class="advogada">
-    <img src="assets/foto-profissional.jpg" alt="Advogada Responsável" class="advogada-img"/>
+    assets/foto-profissional.jpg
     <div class="advogada-info">
       <h2>Dra. Débora Kulczar</h2>
       <p>Advogada - OAB 479600-SP</p>
       <p>Profissional qualificada e comprometida com o seu sucesso.</p>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/d%C3%A9bora-kulczar-861176b7/" target="_blank">LinkedIn</a>
-        <a href="https://www.instagram.com/dkulczar.adv/" target="_blank">Instagram</a>
+        https://www.linkedin.com/in/d%C3%A9bora-kulczar-861176b7/LinkedIn</a>
+        <a href="https://www.instagram.com/dkulczar.adv/"/a>
       </div>
     </div>
   </section>
 
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Débora Kulczar Advocacia. Todos os direitos reservados.</p>
   </footer>
+
 </body>
-</html>
