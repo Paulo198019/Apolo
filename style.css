@@ -1,3 +1,4 @@
+
 /* Reset e base */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
@@ -52,10 +53,13 @@ body {
   flex: 1; padding: 40px;
   display: flex; flex-direction: column; justify-content: center;
 }
-.about-right h2 { font-size: 2rem; margin-bottom: 12px; }
+/* Alteração aplicada aqui */
+.about-right h2 { font-size: 35.2px; margin-bottom: 12px; }
 .about-right p { font-size: 1.1rem; }
 
+/* Alteração aplicada aqui */
 .cards { text-align: center; padding: 50px; background-color: #f1f1f1; }
+.cards h2 { font-size: 35.2px; }
 .card-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
 .card {
   background-color: #fff; padding: 25px; border-radius: 12px;
