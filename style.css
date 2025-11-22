@@ -47,6 +47,7 @@ nav ul li a {
     flex-wrap: wrap;
     padding: 20px;
     gap: 20px;
+    align-items: center;
 }
 
 .imagem-escritorio img {
@@ -82,4 +83,10 @@ nav ul li a {
 .card img {
     width: 100%;
     height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #f8f8f8;
 }
