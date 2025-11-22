@@ -1,74 +1,41 @@
-# Débora Kulczar Advocacia - Landing Page
 
-## 📌 Descrição
-Este projeto é uma landing page profissional para o escritório **Débora Kulczar Advocacia**, desenvolvida para apresentar informações institucionais, áreas de atuação e facilitar o contato com clientes. O site é responsivo, moderno e publicado via **GitHub Pages**.
+# Landing Page - Escritório Jurídico
 
----
-
-## 🏗 Estrutura do Projeto
-```
-Apolo/
-├── index.html          # Página principal
-├── style.css           # Estilos do site (layout, cores, tipografia)
-├── script.js           # Interações e validação do formulário
-└── assets/             # Imagens do projeto
-    ├── logo.png        # Logo do escritório
-    ├── escritorio.jpg  # Imagem do escritório
-    └── foto-profissional.jpg # Foto da advogada responsável
-```
+Este projeto é uma **landing page responsiva** para um escritório de advocacia, desenvolvida para ser publicada no **GitHub Pages**.  
+O objetivo é apresentar os serviços jurídicos, destacar a advogada responsável e facilitar o contato com clientes.
 
 ---
 
-## ✨ Funcionalidades
-- Banner com logo e botões de contato (WhatsApp e E-mail).
-- Seção institucional com textos "Quem Somos" e "Sobre".
-- Cards para áreas de atuação.
-- Imagem da advogada responsável com links para redes sociais (LinkedIn e Instagram).
-- Layout responsivo para dispositivos móveis.
+## 📂 Estrutura do Projeto
 
 ---
 
-## 🚀 Como editar e publicar no GitHub Pages
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/paulo198019/Apolo.git
-   ```
-2. **Edite os arquivos conforme necessário:**
-   - `index.html` → Conteúdo da página.
-   - `style.css` → Ajustes de design e tipografia.
-   - `script.js` → Interações e validação.
-3. **Adicione ou substitua imagens na pasta `assets/`.**
-4. **Commit e push para a branch principal:**
-   ```bash
-   git add .
-   git commit -m "Atualização do site"
-   git push origin main
-   ```
-5. **Verifique configuração do GitHub Pages:**
-   - Vá em **Settings → Pages**.
-   - Selecione **Branch:** `main` e **Folder:** `/ (root)`.
-6. **Acesse a URL pública:**
-   ```
-   https://paulo198019.github.io/Apolo/
-   ```
+## ✅ Como usar este projeto
+
+### 1. **Substitua as imagens**
+- Coloque sua **logomarca** na raiz com o nome `logo.png`.
+- Na pasta `img/`, substitua os arquivos pelos seus:
+  - `banner.jpg` → imagem do banner principal.
+  - `escritorio.jpg` → foto do escritório.
+  - `advogada.jpg` → foto da advogada responsável.
+  - `direito-trabalhista.jpg`, `direito-previdenciario.jpg`, `direito-consumidor.jpg`, `direito-civil.jpg`, `direito-empresarial.jpg` → imagens para os cards de serviços.
+
+> **Importante:** Use nomes exatamente iguais aos listados acima, sem espaços ou acentos.
 
 ---
 
-## 🔄 Boas práticas para manter o site atualizado
-- Sempre use nomes corretos para arquivos principais: `index.html`, `style.css`, `script.js`.
-- Evite espaços ou caracteres especiais nos nomes das imagens.
-- Teste localmente antes de enviar para o GitHub.
+### 2. **Personalize os textos**
+- Abra `index.html` e edite:
+  - **Banner:** título, descrição e botões.
+  - **Quem Somos:** texto sobre o escritório.
+  - **Advogada Responsável:** nome, OAB e especialidade.
+  - **Links das redes sociais:** WhatsApp, Instagram, LinkedIn.
 
 ---
 
-## 🔗 Links úteis
-- [LinkedIn da Dra. Débora Kulczar](https://www.linkedin.com/in/d%C3%A9bora-kulczar-861176b7/)
-- [Instagram do Escritório](https://www.instagram.com/dkulczar.adv/)
-
----
-
-## ✅ Tecnologias utilizadas
-- **HTML5**
-- **CSS3** (responsividade e design)
-- **JavaScript** (interações)
-- **GitHub Pages** (publicação)
+### 3. **Configuração do Formulário**
+O formulário atual é estático. Para receber mensagens:
+- **Opção 1:** Use um serviço como Formspree ou [Google Forms].
+- **Opção 2:** Integre com WhatsApp (link direto):
+  ```html
+  https://wa.me/5511999999999Enviar pelo WhatsApp</a>
