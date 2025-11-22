@@ -12,51 +12,38 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
-.navbar {
+/* Banner */
+.hero {
+    background: url('img/banner.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.hero-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background: #1a1a1a;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
 }
 
-.logo {
-    width: 120px;
+.hero-text {
+    max-width: 600px;
 }
 
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.menu li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu li a:hover {
-    color: #f4b400;
-}
-
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: url('img/banner.jpg') center/cover no-repeat;
-    color: #fff;
-}
-
-.hero h1 {
+.hero-text h1 {
     font-size: 2.5rem;
     margin-bottom: 15px;
 }
 
-.hero p {
+.hero-text p {
     font-size: 1.2rem;
     margin-bottom: 25px;
+}
+
+.hero-logo img {
+    width: 150px;
 }
 
 .btn {
@@ -78,33 +65,45 @@ body {
     opacity: 0.9;
 }
 
-/* Seções */
-section {
+/* Quem Somos */
+.sobre-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
     padding: 50px 20px;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
-.sobre img {
+.sobre-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.sobre-img img {
     max-width: 400px;
-    margin-top: 20px;
     border-radius: 8px;
 }
 
-/* Cards */
+/* Serviços */
+.servicos {
+    text-align: center;
+    padding: 50px 20px;
+}
+
 .cards {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .card {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 300px;
     padding: 20px;
-    text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -114,7 +113,26 @@ section {
     margin-bottom: 15px;
 }
 
-/* Formulário */
+/* Advogada */
+.advogada {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.advogada-foto {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Contato */
 form {
     max-width: 500px;
     margin: 0 auto;
@@ -145,26 +163,17 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .navbar {
+    .hero-content {
         flex-direction: column;
+        text-align: center;
     }
 
-    .menu {
+    .sobre-content {
         flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
+        text-align: center;
     }
 
-    .hero h1 {
+    .hero-text h1 {
         font-size: 1.8rem;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sobre img {
-        width: 100%;
     }
 }
