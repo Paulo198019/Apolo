@@ -1,11 +1,16 @@
 
-// Exemplo simples: botão para contato via WhatsApp
 document.addEventListener('DOMContentLoaded', () => {
-  const contactButton = document.createElement('button');
-  contactButton.textContent = 'Fale Conosco no WhatsApp';
-  contactButton.onclick = () => {
+  const whatsappBtn = document.getElementById('whatsappBtn');
+  whatsappBtn.addEventListener('click', () => {
     window.open('https://wa.me/5511999999999', '_blank'); // Substitua pelo número real
-  };
+  });
 
-  document.querySelector('main').appendChild(contactButton);
+  // Scroll suave para links do menu
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
 });
