@@ -8,7 +8,7 @@
 }
 
 .hero-left {
-    flex: 1; /* Ocupa metade */
+    flex: 1; /* Ocupa metade do espaço */
     height: 100%;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .hero-right {
-    flex: 1; /* Ocupa metade */
+    flex: 1; /* Ocupa metade do espaço */
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -32,6 +32,7 @@
     font-size: 2.5rem;
     margin-bottom: 15px;
 }
+
 .hero-right p {
     font-size: 1.2rem;
     line-height: 1.8;
