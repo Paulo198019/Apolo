@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 
-// Configuração do Vite para GitHub Pages
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
 export default defineConfig({
   plugins: [react()],
-  base: '/Apolo/', // Apolo
-})
+  base: '/Apolo/', // Nome do repositório no GitHub
+});
