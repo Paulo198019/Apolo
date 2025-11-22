@@ -1,0 +1,1 @@
+export function figma/ImageWithFallback() { return (<div>figma/ImageWithFallback</div>); }
