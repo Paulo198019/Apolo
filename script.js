@@ -1,18 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuList = document.getElementById('menu-list');
 
-    menuToggle.addEventListener('click', function() {
-        menuList.style.display = menuList.style.display === 'block' ? 'none' : 'block';
-    });
+// Exemplo simples: botão para contato via WhatsApp
+document.addEventListener('DOMContentLoaded', () => {
+  const contactButton = document.createElement('button');
+  contactButton.textContent = 'Fale Conosco no WhatsApp';
+  contactButton.onclick = () => {
+    window.open('https://wa.me/5511999999999', '_blank'); // Substitua pelo número real
+  };
 
-    // Rolagem suave para âncoras
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+  document.querySelector('main').appendChild(contactButton);
 });
